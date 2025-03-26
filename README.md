@@ -1,7 +1,7 @@
 # TMDb Labels for Plex
 
 ## Overview
-Plex Label Updater is a Python tool which applies labels to your episodes/seasons/shows based on data from The Movie Database (TMDb).
+TMDb Labels for Plex is a Python tool which applies labels to your episodes/seasons/shows based on data from The Movie Database (TMDb).
 
 It will apply labels for things such as:
 - Pilots (Season = 1, Episode = 1)
