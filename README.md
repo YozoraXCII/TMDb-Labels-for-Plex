@@ -117,12 +117,14 @@ For -`-label`, it filters for shows that have the specified label. This can be u
 Clone the repository:
 
   ```bash
-  git clone <repository_url>
+  git clone https://github.com/YozoraXCII/TMDb-Labels-for-Plex
   ```
 
 Install the required packages:
 
   ```bash
+  cd TMDb-Labels-for-Plex
+  # Create a virtual environment here if you wish and activate it
   pip install -r requirements.txt
   ```
 
