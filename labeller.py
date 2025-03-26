@@ -9,7 +9,7 @@ from plexapi.server import PlexServer
 PLEX_URL = 'PLEX_URL'
 PLEX_TOKEN = 'PLEX_TOKEN'
 TMDB_API_KEY = 'TMDB_API_KEY'
-TV_LIBRARY_NAME = 'LIBRARY_NAME'
+TV_LIBRARY_NAME = 'TV_LIBRARY_NAME'
 LOG_PATH = 'labeller.json'
 
 # --- Date Formatting Options ---

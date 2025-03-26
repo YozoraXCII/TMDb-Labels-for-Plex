@@ -27,6 +27,8 @@ You can modify the following variables directly in the script:
   - `DAY_INDICATOR`: Set to `True` to use the weekday name (e.g., "Sunday") for episodes airing within 7 days.  
   - `DAYS_TO_CONSIDER`: Number of days (including today) in which an upcoming episode will trigger a **New Episode/New Season** label.
   - `RETURNING_DAYS`: Maximum number of days for which a **Returning _<date>_** label will be applied if not already processed.
+- **Logging**
+  - `LOG_PATH`: What to name the log file (used to track what has been labelled and when)
 
 ## CLI Options
 - `--clear`  
