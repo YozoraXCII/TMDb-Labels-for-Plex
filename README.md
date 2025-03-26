@@ -45,7 +45,7 @@ You can modify the following variables directly in the script:
   Enables detailed trace-level logging for debugging and progress visibility.
 
 ## Examples
-- **Process a Show by TMDb ID (for updating labels):**
+**Process a Show by TMDb ID (for updating labels):**
   ```bash
   python labeller.py --tmdb 111803
   ```
@@ -104,29 +104,13 @@ You can modify the following variables directly in the script:
 
 The script uses Plex’s built-in search methods to retrieve only the shows that match the filters provided via --tmdb, --title, --collection, or --label.
 
-For --tmdb, it fetches the show’s title from TMDb and searches Plex by that title.
+For `--tmdb`, it fetches the show’s title from TMDb and searches Plex by that title.
 
-For --title, it searches Plex directly.
+For -`-title`, it searches Plex directly.
 
-For --collection, it retrieves only the items in the specified collection.
+For `--collection`, it retrieves only the items in the specified collection. (**Note**: This only works for Non-Smart collections)
 
-For --label, it filters for shows that already have that label.
-
-**Label Updating:**
-
-Upcoming Episode Labels:
-If an upcoming episode is scheduled to air within DAYS_TO_CONSIDER days, the script adds a label:
-
-"New Episode <date>" if the upcoming episode is part of the latest season and not a season premiere.
-
-"New Season <date>" if the upcoming episode is a season premiere.
-
-Season Labels:
-The script determines the season label based solely on the last aired episode in that season. If that episode qualifies (as a Pilot, Season Premiere, Mid-Season Finale, Season Finale, or Series Finale), it applies that label to the season. The latest season’s label is also applied to the show.
-
-Status Labels:
-The script adds status labels (like Status: Returning Series) based on the TMDb status.
-
+For -`-label`, it filters for shows that have the specified label. This can be used for Kometa Smart Label collections.
 
 ## Installation
 
@@ -144,8 +128,9 @@ Install the required packages:
 
 Update the configuration settings in the script (e.g., TMDB_API_KEY, PLEX_URL, PLEX_TOKEN, etc.).
 
-Usage
-Run the script with your desired options:
+## Usage
+
+Run the script with your desired options (anything inside `[ ]` brackets is optional, only `python labeller.py` is required to do a standard run)
 
   ```bash
   python labeller.py [--clear] [--tmdb <id>] [--title "<show name>"] [--collection "<collection>"] [--label "<label>"] [--trace]
