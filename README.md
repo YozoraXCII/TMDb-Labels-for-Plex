@@ -31,8 +31,11 @@ You can modify the following variables directly in the script:
   - `LOG_PATH`: What to name the log file (used to track what has been labelled and when)
 
 ## CLI Options
+
+These CLI options can be combined.
+
 - `--clear`  
-  Clears special labels (both season and show labels) from matching shows and exits.
+  Clears special labels (for episode, season and show labels) from matching shows and exits.
 - `--tmdb <id>`  
   Processes only shows matching the given TMDb ID. The tool fetches the show title from TMDb and then uses Plex’s search to find all items with that title.
 - `--title "<show name>"`  
