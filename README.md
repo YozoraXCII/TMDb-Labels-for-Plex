@@ -62,9 +62,23 @@ You can modify the following variables directly in the script:
 
 **Process Shows by Label:**
   ```bash
-  python labeller.py --label "Testing"
+  python labeller.py --label "My Favorite Shows"
   ```
-  The script will update labels only for shows that already have the "Testing" label in Plex.
+  The script will update labels only for shows that already have the "My Favorite Shows" label in Plex.
+
+**Process Shows by Collection:**
+  ```bash
+  python labeller.py --collection "IMDb Top 250"
+  ```
+  The script will update labels only for shows that already are in the "IMDb Top 250" collection in Plex (**Note**: This will only work for non-Smart collections).
+
+**Clear Labels for All Shows**
+
+  ```bash
+  python labeller.py --clear
+  ```
+
+  This will clear any special labels (and update log) for all shows in the library.
 
 **Clear Labels for a Specific Show Using TMDb ID:**
 
@@ -80,20 +94,27 @@ You can modify the following variables directly in the script:
   python labeller.py --clear --title "The White Lotus"
   ```
   
-  This will clear special labels for all Plex items whose title contains "The White Lotus."
+  This will clear find all Plex items whose title contains "The White Lotus", clearing any special labels (and update log) from them.
 
 **Clear Labels by Label:**
 
   ```bash
-  python labeller.py --clear --label "Testing"
+  python labeller.py --clear --label "My Favorite Shows"
   ```
 
-  This will clear special labels from all items in Plex that have the "Testing" label.
+  This will find all Plex itemsthat have the "My Favorite Shows" label, clearing any special labels (and update log) from them.
+
+**Clear Labels by Collection:**
+  ```bash
+  python labeller.py -- clear --collection "IMDb Top 250"
+  ```
+  This will find all Plex itemsthat are in the "IMDb Top 250" collection, clearing any special labels (and update log) from them (**Note**: This will only work for non-Smart collections).
+
 
 **Enable Trace Logging:**
 
   ```bash
-  python labeller.py --tmdb 111803 --trace
+  python labeller.py --trace
   ```
 
   This enables detailed debug output to help you see exactly what the script is doing during processing.
